@@ -1,0 +1,146 @@
+:root {
+    /* Váriaveis de estilo */
+    --white: #ffffe6;
+    --black: #070411;
+    --main: #3b1aa8;
+}
+
+* {
+    /* Estilos de reset do navegador padrão */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+    /* Estilos padrões */
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+body {
+    /* Aplicando cor de fundo e tamanho da tela */
+    background-color: var(--white);
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    /* Aplicando os estilos que englobam meu banner */
+    width: 100%;
+    height: 40vh;
+    background-color: var(--main);
+}
+
+header .title {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header h2 {
+    font-size: 1em;
+}
+
+header h1,
+header h2 {
+    color: var(--white);
+    text-shadow: 0px 0px 16px #000000d3;
+    z-index: 999;
+}
+
+#imagens-container {
+    width: 100%;
+    height: 100%;
+}
+
+#next,
+#prev {
+    position: absolute;
+    background-color: transparent;
+    color: var(--white);
+    border: none;
+    outline: none;
+    top: 15vh;
+    z-index: 1000;
+    font-size: 2em;
+    cursor: pointer;
+    width: 2rem;
+}
+
+#prev {
+    left: 5%;
+}
+
+#next {
+    left: 92.5%;
+}
+
+.img {
+    width: 100%;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    transition-duration: 2s;
+}
+
+.img:not(.active) {
+    display: none;
+    transition-duration: .5s;
+}
+
+#img_1 {
+    background-image: url('../img/imagem1.png');
+}
+
+#img_2 {
+    background-image: url('../img/imagem2.png');
+}
+
+#img_3 {
+    background-image: url('../img/imagem3.png');
+}
+
+#img_4 {
+    background-image: url('../img/imagem4.png');
+}
+
+main {
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main p {
+    width: 50%;
+}
+
+@media (max-width: 460px) {
+    main {
+        padding: 1rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    main p {
+        width: 100%;
+    }
+}
