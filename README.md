@@ -3,5 +3,5 @@ Sistemas para Internet - FATEC Jales | Prof. José Camargo -
 notes by: https://github.com/jpmoncao
 ### Guide
 
-- [ ] 1º Semestre
+- [x] 1º Semestre
 - [ ] 2º Semestre
